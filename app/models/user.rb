@@ -39,7 +39,7 @@ class User < ActiveRecord::Base
 
   # itemのhaveを解除する
   def unhave(item)
-    haves.find_by(item_id: item.id)
+    haves.find_by(item_id: item.id).destroy
   end
 
   # itemをhaveしている場合true、haveしていない場合falseを返す。
@@ -54,7 +54,7 @@ class User < ActiveRecord::Base
 
   # itemのwantを解除する
   def unwant(item)
-    want.find_by(item_id: item.id)
+    wants.find_by(item_id: item.id).destroy
   end
 
   # itemをwantしている場合true、wantしていない場合falseを返す
