@@ -31,7 +31,7 @@
           <% users = @item.have_users %>
           <% users.each do |user| %>
           <%#= user.inspect %>
-            <%= link_to gravatar_for(user), {:controller => "users", :action => "show", :id => user.id}, {:class => "gravatar"} %>
+            <%= link_to gravatar_for(user, size: 30), {:controller => "users", :action => "show", :id => user.id}, {:class => "gravatar"} %>
           <% end %>
         </div>
       </div>
